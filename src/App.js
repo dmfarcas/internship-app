@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import CssBaseline from "@mui/material/CssBaseline";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Weather from "./Weather";
 
-function App() {
+export default function SimpleContainer() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <CssBaseline />
+      <Container
+        maxWidth="sm"
+        sx={{
+          mt: 2,
+        }}
+      >
+        <Weather />
+        {/* <Box sx={{ bgcolor: "#cfe8fc", height: "100vh" }} /> */}
+      </Container>
+    </React.Fragment>
   );
 }
-
-export default App;
